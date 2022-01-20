@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+
+body{
+    background: #272e48;
+}
+.navbar {
+    margin-bottom: 30px;
+  }
+
+
+.container{
+    margin:0 auto;
+    margin-bottom: 2%;
+}
+  .btn-white {
+    background-color: #fff;
+    border-color: #e7eaf3;
+    margin-top:8%;
+}
+.radius-15 {
+    border-radius: 15px;
+}
+
+.bg-primary {
+    background-color: #008cff!important;
+}
+.bg-danger {
+    background-color: #fd3550!important;
+}
+.bg-warning {
+    background-color: #ffc107!important;
+}
+
+.reports-col{
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+}
+
+.monthly-report-col{
+    display: flex;
+    justify-content: space-evenly ;
+}
+
+.monthly-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+
+.monthly-header > select{
+    width: 200px;
+}
+.form-select > option{
+    text-align: center;
+}
+
