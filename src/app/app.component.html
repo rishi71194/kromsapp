@@ -1,0 +1,116 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
+
+<nav class="navbar navbar-expand-lg" style="background-color: #1A233A;">
+  <a class="navbar-brand" style="color:#bcd0f7; font-weight: bold ; font-size:2em; margin:0 auto;">K.R.O.M.S</a>
+</nav>
+<body>
+  
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
+        <div class="col" *ngFor="let customer of customers">
+            <div class="card radius-15 bg-primary">
+                <div class="card-body text-center">
+                    <div class="p-4 radius-15">
+                        <h5 class="mb-0 text-white">{{customer?.customerName}}</h5>
+                        <p class="mb-3 text-white">{{customer?.customerId}}</p>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Shelf Life: <i>65%</i></li>
+                          <li class="list-group-item">Service Level: <i>95%</i></li>
+                          <li class="list-group-item">Contract Index: <i>1.0000</i></li>
+                       </ul>
+                        <div class="d-grid"> <a href="#" class="btn btn-white radius-15">Negotiate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+  <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
+      <div class="col">
+          <div class="card radius-15 bg-danger">
+              <div class="card-body text-center">
+                  <div class="p-4 radius-15">  
+                      <h5 class="mb-0 text-white">Stocks</h5>
+                      <p class="mb-3 text-white">Average per week</p>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item" *ngFor="let customer of customers">{{customer?.customerName}} : <i>35000</i></li>
+                     </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card radius-15 bg-danger">
+            <div class="card-body text-center">
+                <div class="p-4 radius-15">  
+                    <h5 class="mb-0 text-white">Service Levels</h5>
+                    <p class="mb-3 text-white">Achieved (6 Months)</p>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item" *ngFor="let customer of customers">{{customer?.customerName}} : <i>95%</i></li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+      <div class="card radius-15 bg-danger">
+          <div class="card-body text-center">
+              <div class="p-4 radius-15">  
+                  <h5 class="mb-0 text-white">Demand vs Delivery</h5>
+                  <p class="mb-3 text-white">(6 Months)</p>
+                  <select class="form-select" aria-label="Year-Selector">
+                    <option value="2018" selected>2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                  </select> 
+                  <select class="form-select" aria-label="Quarter-Selector">
+                    <option value="Q1Q2" selected>Q1-Q2</option>
+                    <option value="Q2Q3">Q2-Q3</option>
+                    <option value="Q3Q4">Q3-Q4</option>
+                  </select> 
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Demand - <i>1222500</i></li>
+                    <li class="list-group-item">Delivery - <i>1222500</i></li>
+                    <li class="list-group-item">{{demvdel.toFixed(2)}}</li>
+                 </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
+      <div class="col">
+          <div class="card radius-15 bg-warning">
+              <div class="card-body text-center">
+                  <div class="p-4 radius-15">
+                      <div class="monthly-header">
+                      <h5 class="text-white">Monthly Reports</h5>
+                      <select class="form-select" aria-label="Month-Selector">
+                        <option value="January"selected>January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                      </select> 
+                      </div>
+                      <div class="monthly-report-col">
+                      <ul class="list-group list-group-flush reports-col">
+                        <li class="list-group-item" style="padding:4%;">Stock (Avg)<br><br><i>222500</i></li>
+                        <li class="list-group-item" style="padding:4%;">Demand<br><br><i>112500</i></li>
+                        <li class="list-group-item" style="padding:4%;">Backorder<br><br><i>2200</i></li>
+                        <li class="list-group-item" style="padding:4%;">Deliveries<br><br><i>111300</i></li>
+                        <li class="list-group-item" style="padding:4%;">Obsoletes<br><br><i>500</i></li>
+                        <li class="list-group-item" style="padding:4%;">Startup Loss/Rejects<br><br><i>250</i></li>
+                     </ul>
+                  </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</body>
