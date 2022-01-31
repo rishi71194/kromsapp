@@ -1,4 +1,4 @@
 export interface Customer{
-    customerId: number;
+    customerID: number;
     customerName: String;
 }
