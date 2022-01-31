@@ -12,7 +12,11 @@ export class CustomerService {
     constructor(private http: HttpClient){}
     
     public getCustomers(): Observable<Customer[]>{
-        return this.http.get<Customer[]>(`${this.apiServerUrl}/customer/all`);
+        return this.http.get<Customer[]>(`${this.apiServerUrl}/customer/list`);
+    }
+
+    public getCustomersById(id: number): Observable<Customer[]>{
+        return this.http.get<Customer[]>(`${this.apiServerUrl}/${id}`);
     }
 
     //will contain customer ID, Name, Shelf Life, Service Level, Contract Index Everytime
